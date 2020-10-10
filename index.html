@@ -1,0 +1,148 @@
+<!Doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+<title>Your Fashion Mart: Home</title>
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+
+}
+body{
+    background-color: darkgrey;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header{
+      background-color:crimson;
+      height: 15vh;
+      background-size: cover;
+      background-position: center;
+}
+ul{
+   float: right;
+   list-style-type: none;
+   margin-top: 35px
+   
+}
+ul li{
+      display: inline-block;
+      
+}
+ul li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 30px;
+        border: 1px solid transparent;
+        transition: 0.8s ease
+}
+ul li a:hover{
+        background-color: #fff;
+        color: #000;
+}
+ul li.active a{
+        background-color: #fff;
+        color: #000;
+}
+.logo img{
+         float: left;
+         width: 75px;
+         height: auto;
+}
+.main{
+     max-width: 1200px;
+     margin: auto;
+}
+.title{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    transform: translate(-10%,-10%);
+}
+.title h1{
+    color: #fff;
+    font-size: 30px;
+}
+.text{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-10%,-20%);
+}
+.text h1{
+    color: #fff;
+    font-size: 30px;
+}
+.text p{
+    color: #fff;
+    font-size: 20px;
+}
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.message h1{
+    color: #fff;
+    font-size: 30px;
+}
+.form1{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translate(-10%,-20%);
+}
+</style>
+</head>
+<body>
+     <header>
+         <div class="logo">
+              <img src="Images/logo.png">
+         </div>
+         <div class="main">
+             <ul>
+                 <li class="active"><a href="#">Home</a></li>
+                 <li><a href="Contact us.html">Contact Us</a></li>
+             </ul>
+         </div>
+         <div class="title">
+               <h1>Your Fashion Mart</h1>
+         </div>
+         <div class="text">
+               <h1>Welcome to Your Fashion Mart</h1>
+               <p>Home of style</p>
+         </div>
+     </header>
+     <form class="form1">
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname"><br>
+              <label for="num">Phone Number:</label><br>
+              <input type="text" id="num" name="num" minlength="11" maxlength="11"><br>
+              <input type="submit" id="Submit">
+     </form>
+     <script>
+        document.getElementById("Submit").onclick=
+              function validation()
+              {
+                  x=document.getElementById("fname")
+                  x2=document.getElementById("lname")
+                   x3=document.getElementById("num")
+                  if(x.value =="" || x2.value=="" || x3.value=="")
+                  {
+                     alert("One or more required fields are empty")
+                  }
+                  if(x3.length < 8)
+                  {
+                      alert("Please enter valid phone number")
+                  }
+              }
+    </script>
+</body>
+</html>
